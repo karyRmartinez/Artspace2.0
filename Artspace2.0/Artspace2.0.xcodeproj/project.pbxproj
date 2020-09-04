@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B2D6AF32501D5570067241B /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B2D6AF22501D5570067241B /* GoogleService-Info .plist */; };
+		6B2D6AF32501D5570067241B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B2D6AF22501D5570067241B /* GoogleService-Info.plist */; };
 		853926668EBED231521CC5E1 /* Pods_Artspace2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF2569DCC08D131953C857A /* Pods_Artspace2_0Tests.framework */; };
 		977BD03D2501CB3200606718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD03C2501CB3200606718 /* AppDelegate.swift */; };
 		977BD03F2501CB3200606718 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD03E2501CB3200606718 /* SceneDelegate.swift */; };
@@ -32,7 +32,7 @@
 		214104C7D16039A9A2D91BB0 /* Pods-Artspace2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artspace2.0Tests.release.xcconfig"; path = "Target Support Files/Pods-Artspace2.0Tests/Pods-Artspace2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
 		31F240CE9AD653612381DFBB /* Pods-Artspace2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artspace2.0.debug.xcconfig"; path = "Target Support Files/Pods-Artspace2.0/Pods-Artspace2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		583C297EC3CA664D207B01FB /* Pods-Artspace2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artspace2.0.release.xcconfig"; path = "Target Support Files/Pods-Artspace2.0/Pods-Artspace2.0.release.xcconfig"; sourceTree = "<group>"; };
-		6B2D6AF22501D5570067241B /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
+		6B2D6AF22501D5570067241B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6BF2569DCC08D131953C857A /* Pods_Artspace2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artspace2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BD0392501CB3200606718 /* Artspace2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artspace2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BD03C2501CB3200606718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				977BD0452501CB3700606718 /* Assets.xcassets */,
 				977BD0472501CB3700606718 /* LaunchScreen.storyboard */,
 				977BD04A2501CB3700606718 /* Info.plist */,
-				6B2D6AF22501D5570067241B /* GoogleService-Info .plist */,
+				6B2D6AF22501D5570067241B /* GoogleService-Info.plist */,
 			);
 			path = Artspace2.0;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				977BD0492501CB3700606718 /* LaunchScreen.storyboard in Resources */,
-				6B2D6AF32501D5570067241B /* GoogleService-Info .plist in Resources */,
+				6B2D6AF32501D5570067241B /* GoogleService-Info.plist in Resources */,
 				977BD0462501CB3700606718 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
