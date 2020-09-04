@@ -6,6 +6,7 @@ target 'Artspace2.0' do
   use_frameworks!
 
   # Pods for Artspace2.0
+    pod 'Firebase/Analytics'
 
   target 'Artspace2.0Tests' do
     inherit! :search_paths
