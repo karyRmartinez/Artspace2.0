@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		853926668EBED231521CC5E1 /* Pods_Artspace2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF2569DCC08D131953C857A /* Pods_Artspace2_0Tests.framework */; };
 		977BD03D2501CB3200606718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD03C2501CB3200606718 /* AppDelegate.swift */; };
 		977BD03F2501CB3200606718 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD03E2501CB3200606718 /* SceneDelegate.swift */; };
 		977BD0412501CB3200606718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD0402501CB3200606718 /* ViewController.swift */; };
 		977BD0462501CB3700606718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 977BD0452501CB3700606718 /* Assets.xcassets */; };
 		977BD0492501CB3700606718 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977BD0472501CB3700606718 /* LaunchScreen.storyboard */; };
 		977BD0542501CB3700606718 /* Artspace2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD0532501CB3700606718 /* Artspace2_0Tests.swift */; };
+		F24D92B6575F513CD9C02239 /* Pods_Artspace2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A69B70FDEADF0A8E8C3D0F /* Pods_Artspace2_0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		214104C7D16039A9A2D91BB0 /* Pods-Artspace2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artspace2.0Tests.release.xcconfig"; path = "Target Support Files/Pods-Artspace2.0Tests/Pods-Artspace2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
+		31F240CE9AD653612381DFBB /* Pods-Artspace2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artspace2.0.debug.xcconfig"; path = "Target Support Files/Pods-Artspace2.0/Pods-Artspace2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		583C297EC3CA664D207B01FB /* Pods-Artspace2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artspace2.0.release.xcconfig"; path = "Target Support Files/Pods-Artspace2.0/Pods-Artspace2.0.release.xcconfig"; sourceTree = "<group>"; };
+		6BF2569DCC08D131953C857A /* Pods_Artspace2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artspace2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BD0392501CB3200606718 /* Artspace2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artspace2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BD03C2501CB3200606718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		977BD03E2501CB3200606718 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		977BD04F2501CB3700606718 /* Artspace2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Artspace2.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BD0532501CB3700606718 /* Artspace2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artspace2_0Tests.swift; sourceTree = "<group>"; };
 		977BD0552501CB3700606718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9A69B70FDEADF0A8E8C3D0F /* Pods_Artspace2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artspace2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC36722D333C457C94B0E2D /* Pods-Artspace2.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artspace2.0Tests.debug.xcconfig"; path = "Target Support Files/Pods-Artspace2.0Tests/Pods-Artspace2.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F24D92B6575F513CD9C02239 /* Pods_Artspace2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853926668EBED231521CC5E1 /* Pods_Artspace2_0Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E17C2BE5D0D363F6D3EAC60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9A69B70FDEADF0A8E8C3D0F /* Pods_Artspace2_0.framework */,
+				6BF2569DCC08D131953C857A /* Pods_Artspace2_0Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9270BCE6A4F2F532B41051E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31F240CE9AD653612381DFBB /* Pods-Artspace2.0.debug.xcconfig */,
+				583C297EC3CA664D207B01FB /* Pods-Artspace2.0.release.xcconfig */,
+				FEC36722D333C457C94B0E2D /* Pods-Artspace2.0Tests.debug.xcconfig */,
+				214104C7D16039A9A2D91BB0 /* Pods-Artspace2.0Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		977BD0302501CB3200606718 = {
 			isa = PBXGroup;
 			children = (
 				977BD03B2501CB3200606718 /* Artspace2.0 */,
 				977BD0522501CB3700606718 /* Artspace2.0Tests */,
 				977BD03A2501CB3200606718 /* Products */,
+				9270BCE6A4F2F532B41051E6 /* Pods */,
+				8E17C2BE5D0D363F6D3EAC60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 977BD0582501CB3700606718 /* Build configuration list for PBXNativeTarget "Artspace2.0" */;
 			buildPhases = (
+				53111D49A02903C3D52C464A /* [CP] Check Pods Manifest.lock */,
 				977BD0352501CB3200606718 /* Sources */,
 				977BD0362501CB3200606718 /* Frameworks */,
 				977BD0372501CB3200606718 /* Resources */,
@@ -120,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 977BD05B2501CB3700606718 /* Build configuration list for PBXNativeTarget "Artspace2.0Tests" */;
 			buildPhases = (
+				A0607761731A090FDB3F347B /* [CP] Check Pods Manifest.lock */,
 				977BD04B2501CB3700606718 /* Sources */,
 				977BD04C2501CB3700606718 /* Frameworks */,
 				977BD04D2501CB3700606718 /* Resources */,
@@ -190,6 +225,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53111D49A02903C3D52C464A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Artspace2.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0607761731A090FDB3F347B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Artspace2.0Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		977BD0352501CB3200606718 /* Sources */ = {
@@ -348,10 +430,12 @@
 		};
 		977BD0592501CB3700606718 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F240CE9AD653612381DFBB /* Pods-Artspace2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Artspace2.0/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,10 +449,12 @@
 		};
 		977BD05A2501CB3700606718 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 583C297EC3CA664D207B01FB /* Pods-Artspace2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Artspace2.0/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,6 +468,7 @@
 		};
 		977BD05C2501CB3700606718 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC36722D333C457C94B0E2D /* Pods-Artspace2.0Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -403,6 +490,7 @@
 		};
 		977BD05D2501CB3700606718 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 214104C7D16039A9A2D91BB0 /* Pods-Artspace2.0Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
