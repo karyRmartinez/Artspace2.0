@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>360566676239-af2lqsvpnfidp5gnnins4335k0o1qc85.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.360566676239-af2lqsvpnfidp5gnnins4335k0o1qc85</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBenqc8x0EtBcjafXl_S6xw7m5YitJ6uNU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>360566676239</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Artspace.Artspace2-0</string>
+	<key>PROJECT_ID</key>
+	<string>artspace-capstone</string>
+	<key>STORAGE_BUCKET</key>
+	<string>artspace-capstone.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:360566676239:ios:58a068a9bc3cdb1a0b3c7a</string>
+	<key>DATABASE_URL</key>
+	<string>https://artspace-capstone.firebaseio.com</string>
+</dict>
+</plist>
