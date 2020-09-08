@@ -10,6 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    lazy var ArtImageView: UIImageView = {
+        let ImageView = UIImageView()
+        ImageView.contentMode = .scaleAspectFit
+        ImageView.backgroundColor = .clear
+        return ImageView
+    }()
+    
+    func addSubView() {
+        self.view.addSubview(ArtImageView)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
