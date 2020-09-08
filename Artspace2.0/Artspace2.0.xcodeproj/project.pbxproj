@@ -13,6 +13,7 @@
 		6B2D6B05250293170067241B /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D6B04250293170067241B /* SavedViewController.swift */; };
 		6B2D6B072502939C0067241B /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D6B062502939B0067241B /* profileViewController.swift */; };
 		6B2D6B09250294810067241B /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D6B08250294810067241B /* TabViewController.swift */; };
+		6B2D6B0B2507F6AE0067241B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2D6B0A2507F6AE0067241B /* DetailViewController.swift */; };
 		853926668EBED231521CC5E1 /* Pods_Artspace2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF2569DCC08D131953C857A /* Pods_Artspace2_0Tests.framework */; };
 		977BD03D2501CB3200606718 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD03C2501CB3200606718 /* AppDelegate.swift */; };
 		977BD03F2501CB3200606718 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977BD03E2501CB3200606718 /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 		6B2D6B04250293170067241B /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		6B2D6B062502939B0067241B /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		6B2D6B08250294810067241B /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		6B2D6B0A2507F6AE0067241B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6BF2569DCC08D131953C857A /* Pods_Artspace2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artspace2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BD0392501CB3200606718 /* Artspace2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artspace2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		977BD03C2501CB3200606718 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				6B2D6B04250293170067241B /* SavedViewController.swift */,
 				6B2D6B062502939B0067241B /* profileViewController.swift */,
 				6B2D6B08250294810067241B /* TabViewController.swift */,
+				6B2D6B0A2507F6AE0067241B /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2D6B0B2507F6AE0067241B /* DetailViewController.swift in Sources */,
 				6B2D6B09250294810067241B /* TabViewController.swift in Sources */,
 				6B2D6B05250293170067241B /* SavedViewController.swift in Sources */,
 				977BD0412501CB3200606718 /* ViewController.swift in Sources */,
