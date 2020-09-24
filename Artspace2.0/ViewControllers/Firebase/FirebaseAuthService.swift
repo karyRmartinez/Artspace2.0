@@ -38,10 +38,9 @@ class FirebaseAuthService {
         changedRequest?.commitChanges(completion: { (error) in
             if let error = error {
                 completion(.failure(error))
-            }else {
-                completion(.success(<#T##()#>))
+            } else {
+                completion(.success(()))
             }
-            
         })
     }
     
