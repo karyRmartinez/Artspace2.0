@@ -11,8 +11,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    var settingFromLogin = false
-
+    
     
     
     override func viewDidLoad() {
