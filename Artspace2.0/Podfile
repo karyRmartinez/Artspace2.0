@@ -7,9 +7,7 @@ target 'Artspace2.0' do
 
   # Pods for Artspace2.0
     pod 'Firebase/Analytics'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Firestore'
-    pod 'Firebase/Storage'
+
   target 'Artspace2.0Tests' do
     inherit! :search_paths
     # Pods for testing
