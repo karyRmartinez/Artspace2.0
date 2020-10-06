@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>993904293972-ido38nrb6li9al2infnll2310o6p0uri.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.993904293972-ido38nrb6li9al2infnll2310o6p0uri</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCfJwv_KtWhFU-Ssp3pACKkG1KRr4wlcbs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>993904293972</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>project.ArtSpaceApp-iOS</string>
+	<key>PROJECT_ID</key>
+	<string>artspaceapp-ios</string>
+	<key>STORAGE_BUCKET</key>
+	<string>artspaceapp-ios.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:993904293972:ios:51b182b524186ddf4155c1</string>
+	<key>DATABASE_URL</key>
+	<string>https://artspaceapp-ios.firebaseio.com</string>
+</dict>
+</plist>
