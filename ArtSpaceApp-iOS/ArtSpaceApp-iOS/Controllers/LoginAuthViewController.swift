@@ -98,13 +98,17 @@ class LoginAuthViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    private func transitionToMainFeedVC( ){
+        // TODO: add code
+    }
+    
     // MARK: Firebase Methods
 //    private func handleLoginResponse(withResult result: Result<User, Error>) {
 //        let alertTitle: String
 //        let alertMessage: String
 //        switch result {
 //        case let .success(user):
-//          transitionToSearchVC()
+//          transitionToMainFeedVC()
 //          print("Logged in user with email \(user.email ?? "no email") and \(user.uid)")
 //        case let .failure(error):
 //          alertTitle = "Login Failure"
