@@ -136,6 +136,9 @@ class LoginAuthViewController: UIViewController {
 
     // MARK: UI Element Constraints
     private func configureUIElements() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         let itemViews = [titleLabel, emailTextField, passwordTextField, loginAuthButton]
         for item in itemViews {
             view.addSubview(item)
@@ -167,5 +170,12 @@ class LoginAuthViewController: UIViewController {
             loginAuthButton.widthAnchor.constraint(equalToConstant: 300),
             loginAuthButton.heightAnchor.constraint(equalToConstant: 40)
         ])
+    }
+}
+
+extension LoginAuthViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
