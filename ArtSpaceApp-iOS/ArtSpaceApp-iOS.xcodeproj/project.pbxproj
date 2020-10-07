@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0858A070252D45C100E58F70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0858A06F252D45C100E58F70 /* GoogleService-Info.plist */; };
 		0858A078252D462E00E58F70 /* LoginAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858A077252D462E00E58F70 /* LoginAuthViewController.swift */; };
+		0858A088252D529400E58F70 /* String+Validations+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858A087252D529400E58F70 /* String+Validations+Ext.swift */; };
 		6B51BEB0252CBAF600B63655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEAF252CBAF600B63655 /* AppDelegate.swift */; };
 		6B51BEB2252CBAF600B63655 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEB1252CBAF600B63655 /* SceneDelegate.swift */; };
 		6B51BEB4252CBAF600B63655 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEB3252CBAF600B63655 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		0858A06F252D45C100E58F70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0858A077252D462E00E58F70 /* LoginAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthViewController.swift; sourceTree = "<group>"; };
+		0858A087252D529400E58F70 /* String+Validations+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations+Ext.swift"; sourceTree = "<group>"; };
 		6B26840427234145DF399219 /* Pods-ArtSpaceApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSpaceApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6B51BEAC252CBAF600B63655 /* ArtSpaceApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArtSpaceApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B51BEAF252CBAF600B63655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				6B51BEBA252CBAF700B63655 /* LaunchScreen.storyboard */,
 				6B51BEBD252CBAF700B63655 /* Info.plist */,
 				0858A06F252D45C100E58F70 /* GoogleService-Info.plist */,
+				0858A087252D529400E58F70 /* String+Validations+Ext.swift */,
 			);
 			path = "ArtSpaceApp-iOS";
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B51BECF252CC33600B63655 /* TabBarViewController.swift in Sources */,
+				0858A088252D529400E58F70 /* String+Validations+Ext.swift in Sources */,
 				6B51BEB4252CBAF600B63655 /* ViewController.swift in Sources */,
 				0858A078252D462E00E58F70 /* LoginAuthViewController.swift in Sources */,
 				6B51BED5252CC44F00B63655 /* SavedViewController.swift in Sources */,
