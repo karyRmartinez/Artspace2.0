@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+//import FirebaseAuth
 
 class LoginAuthViewController: UIViewController {
     
@@ -18,8 +18,8 @@ class LoginAuthViewController: UIViewController {
     }
     
     enum PlaceholderText {
-        static let emailAddress = "Enter Email Address"
-        static let password = "Enter Password"
+        static let emailAddress = "Email Address"
+        static let password = "Password"
         static let required = "Required"
         static let fillAllFields = "Please fill in all fields"
     }
@@ -49,7 +49,7 @@ class LoginAuthViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder = PlaceholderText.password
         textField.borderStyle = .roundedRect
-        textField.backgroundColor = .lightGray
+        textField.backgroundColor = .lightText
         textField.isSecureTextEntry = true
         return textField
     }()
@@ -80,6 +80,7 @@ class LoginAuthViewController: UIViewController {
     // MARK: Lifecyle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         configureUIElements()
         constrainUIElelements()
         createDismissKeyboardTapGesture()
@@ -98,7 +99,7 @@ class LoginAuthViewController: UIViewController {
     }
     
     // MARK: Firebase Methods
-    private func handleLoginResponse(withResult result: Result<User, Error>) {
+//    private func handleLoginResponse(withResult result: Result<User, Error>) {
 //        let alertTitle: String
 //        let alertMessage: String
 //        switch result {
@@ -110,7 +111,7 @@ class LoginAuthViewController: UIViewController {
 //          alertMessage = "An error occured while logging in: \(error.localizedDescription)"
 //          presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
 //        }
-    }
+//    }
     
     private func loginUser(_ sender: UIButton) {
 //        guard let validCredentials = validateUserCredentials else { return }
@@ -129,7 +130,8 @@ class LoginAuthViewController: UIViewController {
     
     // MARK: objc Methods
     @objc func loginAuthButtonPressed() {
-        loginUser(loginAuthButton)
+//        loginUser(loginAuthButton)
+        print("Login Button Pressed")
     }
 
     // MARK: UI Element Constraints
