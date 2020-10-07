@@ -14,6 +14,7 @@ class LoginAuthViewController: UIViewController {
     // MARK: Enums
     enum Title {
         static let appName = "Artspace"
+        static let loginButton = "Login"
     }
     
     enum Font {
@@ -24,10 +25,6 @@ class LoginAuthViewController: UIViewController {
     enum PlaceholderText {
         static let emailAddress = "Email Address"
         static let password = "Password"
-    }
-    
-    enum ButtonTitle {
-        static let loginButton = "Login"
     }
     
     enum Color {
@@ -63,7 +60,7 @@ class LoginAuthViewController: UIViewController {
 
     lazy var loginAuthButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle(ButtonTitle.loginButton, for: .normal)
+        button.setTitle(Title.loginButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: Font.button, size: 16)
         button.backgroundColor = Color.backgroundColor
@@ -106,7 +103,21 @@ class LoginAuthViewController: UIViewController {
     }
     
     private func transitionToMainFeedVC( ){
-        // TODO: add code
+//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+//          let sceneDelegate = windowScene.delegate as? SceneDelegate,
+//          let window = sceneDelegate.window else {
+//            return
+//        }
+//        UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
+//          if FirebaseAuthService.manager.currentUser != nil {
+//            window.rootViewController = HomeTabBarViewController()
+//          } else {
+//            window.rootViewController = { () -> HomeTabBarViewController in
+//              let searchVC = HomeTabBarViewController()
+//              return searchVC
+//            }()
+//          }
+//        }, completion: nil)
     }
     
     // MARK: Firebase Methods
@@ -149,7 +160,6 @@ class LoginAuthViewController: UIViewController {
     private func configureUIElements() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        
         let itemViews = [titleLabel, emailTextField, passwordTextField, loginAuthButton]
         for item in itemViews {
             view.addSubview(item)
@@ -159,23 +169,19 @@ class LoginAuthViewController: UIViewController {
     
     private func constrainUIElelements() {
         NSLayoutConstraint.activate([
-            // titleLabel
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 120),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            // emailTextField
             emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
             emailTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emailTextField.widthAnchor.constraint(equalToConstant: 300),
             emailTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            // passwordTextField
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 30),
             passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             passwordTextField.widthAnchor.constraint(equalToConstant: 300),
             passwordTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            // loginAuthButton
             loginAuthButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
             loginAuthButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginAuthButton.widthAnchor.constraint(equalToConstant: 300),
