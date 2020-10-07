@@ -12,6 +12,10 @@ import UIKit
 class LoginAuthViewController: UIViewController {
     
     // MARK: Enums
+    enum Title {
+        static let appName = "Artspace"
+    }
+    
     enum Font {
         static let title = "SavoyeLetPlain"
         static let button = "Arial-Bold"
@@ -20,19 +24,22 @@ class LoginAuthViewController: UIViewController {
     enum PlaceholderText {
         static let emailAddress = "Email Address"
         static let password = "Password"
-        static let required = "Required"
-        static let fillAllFields = "Please fill in all fields"
     }
     
     enum ButtonTitle {
         static let loginButton = "Login"
     }
     
+    enum Color {
+        static let textColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        static let backgroundColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+    }
+    
     //MARK: UI Properties
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
-        label.text = "ArtSpace"
+        label.textColor = Color.textColor
+        label.text = Title.appName
         label.font = UIFont(name: Font.title, size: 45)
         return label
     }()
@@ -59,7 +66,7 @@ class LoginAuthViewController: UIViewController {
         button.setTitle(ButtonTitle.loginButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: Font.button, size: 16)
-        button.backgroundColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        button.backgroundColor = Color.backgroundColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(loginAuthButtonPressed), for: .touchUpInside)
         return button
@@ -69,8 +76,8 @@ class LoginAuthViewController: UIViewController {
     private var validateUserCredentials: (email: String, password: String)? {
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !email.isEmpty else {
-            let alertTitle = PlaceholderText.required
-            let alertMessage = PlaceholderText.fillAllFields
+            let alertTitle = "Required"
+            let alertMessage = "Please fill in all fields"
             presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
             return nil
         }
@@ -138,7 +145,7 @@ class LoginAuthViewController: UIViewController {
         print("Login Button Pressed")
     }
 
-    // MARK: UI Element Constraints
+    // MARK: UIElement Configuration
     private func configureUIElements() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
