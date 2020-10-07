@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0858A070252D45C100E58F70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0858A06F252D45C100E58F70 /* GoogleService-Info.plist */; };
 		0858A078252D462E00E58F70 /* LoginAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858A077252D462E00E58F70 /* LoginAuthViewController.swift */; };
 		0858A088252D529400E58F70 /* String+Validations+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858A087252D529400E58F70 /* String+Validations+Ext.swift */; };
 		6B51BEB0252CBAF600B63655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEAF252CBAF600B63655 /* AppDelegate.swift */; };
@@ -25,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0858A06F252D45C100E58F70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0858A077252D462E00E58F70 /* LoginAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthViewController.swift; sourceTree = "<group>"; };
 		0858A087252D529400E58F70 /* String+Validations+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations+Ext.swift"; sourceTree = "<group>"; };
 		6B26840427234145DF399219 /* Pods-ArtSpaceApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSpaceApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				6B51BEB8252CBAF700B63655 /* Assets.xcassets */,
 				6B51BEBA252CBAF700B63655 /* LaunchScreen.storyboard */,
 				6B51BEBD252CBAF700B63655 /* Info.plist */,
-				0858A06F252D45C100E58F70 /* GoogleService-Info.plist */,
 				0858A087252D529400E58F70 /* String+Validations+Ext.swift */,
 			);
 			path = "ArtSpaceApp-iOS";
@@ -184,7 +181,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B51BEBC252CBAF700B63655 /* LaunchScreen.storyboard in Resources */,
-				0858A070252D45C100E58F70 /* GoogleService-Info.plist in Resources */,
 				6B51BEB9252CBAF700B63655 /* Assets.xcassets in Resources */,
 				6B51BEB7252CBAF600B63655 /* Main.storyboard in Resources */,
 			);
