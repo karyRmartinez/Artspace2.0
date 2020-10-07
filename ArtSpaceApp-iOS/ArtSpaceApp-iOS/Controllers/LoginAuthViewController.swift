@@ -39,7 +39,7 @@ class LoginAuthViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Color.textColor
-        label.text = Title.appName
+        label.text = "Login Screen"
         label.font = UIFont(name: Font.title, size: 45)
         return label
     }()
