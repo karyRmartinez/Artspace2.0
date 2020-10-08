@@ -10,13 +10,25 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class SignUpVC: UIViewController {
+class SignupAuthViewController: UIViewController {
+    enum Text {
+        static let createAccount  = "ArtSpace: Create Account"
+        static let arialFont = "Arial"
+        static let verdanaFont = "Verdana"
+        static let verdanaBoldFont = "Verdana-Bold"
+        static let createButton = "Create Account"
+    }
     
+    enum UserDetails {
+        static let username =  "User Name"
+        static let email = "Enter Email"
+        static let password =  "Enter Password"
+    }
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "ArtSpace: Create Account"
-        label.font = UIFont(name: "Arial", size: 28)
+        label.text = Text.createAccount
+        label.font = UIFont(name: Text.arialFont, size: 28)
         label.textColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         label.backgroundColor = .clear
         label.textAlignment = .center
@@ -25,8 +37,8 @@ class SignUpVC: UIViewController {
     
     lazy var UserNameTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "First Name"
-        textField.font = UIFont(name: "Verdana", size: 14)
+        textField.placeholder = UserDetails.username
+        textField.font = UIFont(name: Text.verdanaFont, size: 14)
         textField.backgroundColor = .lightText
         textField.borderStyle = .roundedRect
         textField.autocorrectionType = .no
@@ -36,8 +48,8 @@ class SignUpVC: UIViewController {
     
     lazy var emailTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter Email"
-        textField.font = UIFont(name: "Verdana", size: 14)
+        textField.placeholder = UserDetails.email
+        textField.font = UIFont(name: Text.verdanaFont, size: 14)
         textField.backgroundColor = .lightText
         textField.borderStyle = .roundedRect
         textField.autocorrectionType = .no
@@ -46,22 +58,23 @@ class SignUpVC: UIViewController {
     
     lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Enter Password"
-        textField.font = UIFont(name: "Verdana", size: 14)
+        textField.placeholder = UserDetails.password
+        textField.font = UIFont(name: Text.verdanaFont, size: 14)
         textField.backgroundColor = .lightText
         textField.borderStyle = .roundedRect
         textField.autocorrectionType = .no
-        textField.isSecureTextEntry = true
+        //textField.isSecureTextEntry = true
         return textField
     }()
     
     lazy var createButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Create", for: .normal)
+        button.setTitle(Text.createButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 14)
+        button.titleLabel?.font = UIFont(name: Text.verdanaBoldFont, size: 14)
         button.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         button.layer.cornerRadius = 5
+        button.addTarget(self, action: #selector(trySignUp), for: .touchUpInside)
         button.isEnabled = true
         return button
     }()
@@ -81,27 +94,34 @@ class SignUpVC: UIViewController {
         return stackView
     }()
     
-    //MARK: Lifecycle methods
+    //MARK: Obj-C Methods
+    @objc func trySignUp() {
+       
+     
+     }
+     
     
+    //MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        configureViewController()
         setSubviews()
         setTitleLabelConstraints()
         setupStackViewConstraints()
     }
     
-  
+    //MARK: Private methods
+    private func configureViewController() {
+        view.backgroundColor = .systemBackground
+    }
     
-    //MARK: UI Setup
-    
+ //MARK: UI Contraints configuration
     private func setSubviews() {
         self.view.addSubview(titleLabel)
         self.view.addSubview(stackView)
     }
-    
+
     private func setTitleLabelConstraints() {
-        
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 30),
@@ -111,7 +131,6 @@ class SignUpVC: UIViewController {
     }
     
     private func setupStackViewConstraints() {
-        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
