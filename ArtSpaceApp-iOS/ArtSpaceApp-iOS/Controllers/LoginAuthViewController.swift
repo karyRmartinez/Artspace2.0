@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import FirebaseAuth
+import FirebaseAuth
 
 class LoginAuthViewController: UIViewController {
     
@@ -46,6 +46,7 @@ class LoginAuthViewController: UIViewController {
         textField.placeholder = PlaceholderText.emailAddress
         textField.borderStyle = .roundedRect
         textField.backgroundColor = .lightText
+        textField.autocapitalizationType = .none
         return textField
     }()
     
@@ -54,7 +55,8 @@ class LoginAuthViewController: UIViewController {
         textField.placeholder = PlaceholderText.password
         textField.borderStyle = .roundedRect
         textField.backgroundColor = .lightText
-        textField.isSecureTextEntry = true
+        textField.isSecureTextEntry = false
+        textField.autocapitalizationType = .none
         return textField
     }()
 
@@ -103,56 +105,57 @@ class LoginAuthViewController: UIViewController {
     }
     
     private func transitionToMainFeedVC( ){
-//        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-//          let sceneDelegate = windowScene.delegate as? SceneDelegate,
-//          let window = sceneDelegate.window else {
-//            return
-//        }
-//        UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
-//          if FirebaseAuthService.manager.currentUser != nil {
-//            window.rootViewController = HomeTabBarViewController()
-//          } else {
-//            window.rootViewController = { () -> HomeTabBarViewController in
-//              let searchVC = HomeTabBarViewController()
-//              return searchVC
-//            }()
-//          }
-//        }, completion: nil)
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+          let sceneDelegate = windowScene.delegate as? SceneDelegate,
+          let window = sceneDelegate.window else {
+            return
+        }
+        UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
+          if FirebaseAuthService.manager.currentUser != nil {
+            window.rootViewController = HomeTabBarViewController()
+          } else {
+            window.rootViewController = { () -> HomeTabBarViewController in
+              let searchVC = HomeTabBarViewController()
+              return searchVC
+            }()
+          }
+        }, completion: nil)
     }
     
     // MARK: Firebase Methods
-//    private func handleLoginResponse(withResult result: Result<User, Error>) {
-//        let alertTitle: String
-//        let alertMessage: String
-//        switch result {
-//        case let .success(user):
-//          transitionToMainFeedVC()
-//          print("Logged in user with email \(user.email ?? "no email") and \(user.uid)")
-//        case let .failure(error):
-//          alertTitle = "Login Failure"
-//          alertMessage = "An error occured while logging in: \(error.localizedDescription)"
-//          presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
-//        }
-//    }
+    private func handleLoginResponse(withResult result: Result<User, Error>) {
+        let alertTitle: String
+        let alertMessage: String
+        switch result {
+        case let .success(user):
+          transitionToMainFeedVC()
+          print("Logged in user with email \(user.email ?? "no email") and \(user.uid)")
+        case let .failure(error):
+          alertTitle = "Login Failure"
+          alertMessage = "An error occured while logging in: \(error.localizedDescription)"
+          presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
+        }
+    }
     
     private func loginUser(_ sender: UIButton) {
-//        guard let validCredentials = validateUserCredentials else { return }
-//
-//        guard validCredentials.email.isValidEmail else {
-//            let alertTitle = "Error"
-//            let alertMessage = "Please enter a valid email"
-//            presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
-//            return
-//        }
-//        FirebaseAuthService.manager.loginUser(withEmail: validCredentials.email,
-//                                              andPassword: validCredentials.password) { [weak self ](result) in
-//            self?.handleLoginResponse(withResult: result)
-//        }
+        guard let validCredentials = validateUserCredentials else { return }
+
+        guard validCredentials.email.isValidEmail else {
+            let alertTitle = "Error"
+            let alertMessage = "Please enter a valid email"
+            presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
+            return
+        }
+        
+        
+        FirebaseAuthService.manager.loginUser(withEmail: validCredentials.email,
+                                              andPassword: validCredentials.password) { [weak self] (result) in self?.handleLoginResponse(withResult: result)
+        }
     }
     
     // MARK: objc Methods
     @objc func loginAuthButtonPressed() {
-//        loginUser(loginAuthButton)
+        loginUser(loginAuthButton)
         print("Login Button Pressed")
     }
 

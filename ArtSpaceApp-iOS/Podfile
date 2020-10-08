@@ -6,5 +6,8 @@ target 'ArtSpaceApp-iOS' do
   use_frameworks!
 
   # Pods for ArtSpaceApp-iOS
-pod 'Firebase/Analytics'
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Firestore'
+	pod 'Firebase/Storage'
 end
