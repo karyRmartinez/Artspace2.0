@@ -96,10 +96,11 @@ class SignupAuthViewController: UIViewController {
     
     //MARK: Obj-C Methods
     @objc func trySignUp() {
-       
+       if !validateFields() {
+                return
      
      }
-     
+}
     
     //MARK: Lifecycle methods
     override func viewDidLoad() {
@@ -114,6 +115,25 @@ class SignupAuthViewController: UIViewController {
     private func configureViewController() {
         view.backgroundColor = .systemBackground
     }
+    
+    private func validateFields() -> Bool {
+          guard let _ =  UserNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+             //add error alert
+              return false
+          }
+          
+          guard email.isValidEmail else {
+             //add error alert
+              return false
+          }
+          
+          guard password.isValidPassword else {
+            //add error alert
+              return false
+          }
+          
+          return true
+      }
     
  //MARK: UI Contraints configuration
     private func setSubviews() {
