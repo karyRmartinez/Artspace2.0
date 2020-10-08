@@ -112,28 +112,36 @@ class SignupAuthViewController: UIViewController {
     }
     
     //MARK: Private methods
+    private func showErrorAlert(title: String, message: String) {
+    let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+    present(alertVC, animated: true, completion: nil)
+    }
+    
     private func configureViewController() {
         view.backgroundColor = .systemBackground
     }
     
     private func validateFields() -> Bool {
           guard let _ =  UserNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-             //add error alert
+     showErrorAlert(title: "Error", message: "Please fill out all fields.")
               return false
           }
           
           guard email.isValidEmail else {
-             //add error alert
+    showErrorAlert(title: "Error", message: "Please enter a valid email")
               return false
           }
           
           guard password.isValidPassword else {
-            //add error alert
+    showErrorAlert(title: "Error", message: "Please enter a valid password. Passwords must have at least 8 characters.")
               return false
           }
           
           return true
       }
+    
+ 
     
  //MARK: UI Contraints configuration
     private func setSubviews() {
