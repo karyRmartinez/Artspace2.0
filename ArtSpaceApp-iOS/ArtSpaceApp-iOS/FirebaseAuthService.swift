@@ -54,7 +54,7 @@ class FirebaseAuthService {
       let window = sceneDelegate.window else { return }
     
     UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
-      let homeAuthVC = HomeTabBarViewController()
+      let homeAuthVC = LoginAuthViewController()
       window.rootViewController = homeAuthVC
     }, completion: nil)
   }
