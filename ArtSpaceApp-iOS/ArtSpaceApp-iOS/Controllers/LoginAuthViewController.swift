@@ -12,14 +12,14 @@ import FirebaseAuth
 class LoginAuthViewController: UIViewController {
     
     // MARK: Enums
-    enum Title {
+    enum TitleText {
         static let appName = "Artspace"
         static let loginButton = "Login"
     }
     
-    enum Font {
-        static let title = "SavoyeLetPlain"
-        static let button = "Arial-Bold"
+    enum FontStyle {
+        static let savoyeLetPlain = "SavoyeLetPlain"
+        static let arialBold = "Arial-Bold"
     }
     
     enum PlaceholderText {
@@ -37,7 +37,7 @@ class LoginAuthViewController: UIViewController {
         let label = UILabel()
         label.textColor = Color.textColor
         label.text = "Login Screen"
-        label.font = UIFont(name: Font.title, size: 45)
+        label.font = UIFont(name: FontStyle.savoyeLetPlain, size: 45)
         return label
     }()
     
@@ -62,9 +62,9 @@ class LoginAuthViewController: UIViewController {
 
     lazy var loginAuthButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle(Title.loginButton, for: .normal)
+        button.setTitle(TitleText.loginButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: Font.button, size: 16)
+        button.titleLabel?.font = UIFont(name: FontStyle.arialBold, size: 16)
         button.backgroundColor = Color.backgroundColor
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(loginAuthButtonPressed), for: .touchUpInside)

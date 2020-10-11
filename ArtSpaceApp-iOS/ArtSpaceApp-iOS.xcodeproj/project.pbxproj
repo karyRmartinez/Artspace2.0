@@ -11,6 +11,7 @@
 		0858A088252D529400E58F70 /* String+Validations+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0858A087252D529400E58F70 /* String+Validations+Ext.swift */; };
 		085FAA65252FA55900B6DF47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085FAA64252FA55900B6DF47 /* GoogleService-Info.plist */; };
 		085FAA6B252FACAF00B6DF47 /* MainFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085FAA6A252FACAF00B6DF47 /* MainFeedViewController.swift */; };
+		08B151662532BDD300F9353B /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B151652532BDD300F9353B /* FirebaseAuthService.swift */; };
 		6B51BEB0252CBAF600B63655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEAF252CBAF600B63655 /* AppDelegate.swift */; };
 		6B51BEB2252CBAF600B63655 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEB1252CBAF600B63655 /* SceneDelegate.swift */; };
 		6B51BEB4252CBAF600B63655 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEB3252CBAF600B63655 /* ViewController.swift */; };
@@ -18,7 +19,7 @@
 		6B51BEB9252CBAF700B63655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B51BEB8252CBAF700B63655 /* Assets.xcassets */; };
 		6B51BEBC252CBAF700B63655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B51BEBA252CBAF700B63655 /* LaunchScreen.storyboard */; };
 		6B51BECF252CC33600B63655 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BECE252CC33600B63655 /* HomeTabBarViewController.swift */; };
-		A7C7F942E20582B4F53315E6 /* Pods_ArtSpaceApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA027D010D1C754D71DD0D2 /* Pods_ArtSpaceApp_iOS.framework */; };
+		E0D9F0C76C78B14F149F8309 /* Pods_ArtSpaceApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71E498DE1428D291BA0A122 /* Pods_ArtSpaceApp_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,7 @@
 		0858A087252D529400E58F70 /* String+Validations+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations+Ext.swift"; sourceTree = "<group>"; };
 		085FAA64252FA55900B6DF47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		085FAA6A252FACAF00B6DF47 /* MainFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeedViewController.swift; sourceTree = "<group>"; };
-		1CCBAA80230A3679D86EDDAE /* Pods-ArtSpaceApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSpaceApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		2DA027D010D1C754D71DD0D2 /* Pods_ArtSpaceApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtSpaceApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08B151652532BDD300F9353B /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		6B51BEAC252CBAF600B63655 /* ArtSpaceApp-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArtSpaceApp-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B51BEAF252CBAF600B63655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B51BEB1252CBAF600B63655 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +37,9 @@
 		6B51BEBB252CBAF700B63655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B51BEBD252CBAF700B63655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B51BECE252CC33600B63655 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
-		B983A8FF3323F1E7BE82117F /* Pods-ArtSpaceApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSpaceApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		88E90342FADF403556B0B550 /* Pods-ArtSpaceApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSpaceApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A71E498DE1428D291BA0A122 /* Pods_ArtSpaceApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtSpaceApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3A665288F9F512831539B7F /* Pods-ArtSpaceApp-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSpaceApp-iOS.debug.xcconfig"; path = "Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C7F942E20582B4F53315E6 /* Pods_ArtSpaceApp_iOS.framework in Frameworks */,
+				E0D9F0C76C78B14F149F8309 /* Pods_ArtSpaceApp_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +57,8 @@
 		4A48A8BD7EED67B7A6A03FCE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B983A8FF3323F1E7BE82117F /* Pods-ArtSpaceApp-iOS.debug.xcconfig */,
-				1CCBAA80230A3679D86EDDAE /* Pods-ArtSpaceApp-iOS.release.xcconfig */,
+				F3A665288F9F512831539B7F /* Pods-ArtSpaceApp-iOS.debug.xcconfig */,
+				88E90342FADF403556B0B550 /* Pods-ArtSpaceApp-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -67,7 +69,7 @@
 				6B51BEAE252CBAF600B63655 /* ArtSpaceApp-iOS */,
 				6B51BEAD252CBAF600B63655 /* Products */,
 				4A48A8BD7EED67B7A6A03FCE /* Pods */,
-				710E314F03603EF7FA22B509 /* Frameworks */,
+				BE6FE37F3F30B118EFC3FD8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +94,7 @@
 				6B51BEBD252CBAF700B63655 /* Info.plist */,
 				0858A087252D529400E58F70 /* String+Validations+Ext.swift */,
 				085FAA64252FA55900B6DF47 /* GoogleService-Info.plist */,
+				08B151652532BDD300F9353B /* FirebaseAuthService.swift */,
 			);
 			path = "ArtSpaceApp-iOS";
 			sourceTree = "<group>";
@@ -106,10 +109,10 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		710E314F03603EF7FA22B509 /* Frameworks */ = {
+		BE6FE37F3F30B118EFC3FD8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2DA027D010D1C754D71DD0D2 /* Pods_ArtSpaceApp_iOS.framework */,
+				A71E498DE1428D291BA0A122 /* Pods_ArtSpaceApp_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,11 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B51BEC0252CBAF700B63655 /* Build configuration list for PBXNativeTarget "ArtSpaceApp-iOS" */;
 			buildPhases = (
-				76D7C65C98B280B97D575C5C /* [CP] Check Pods Manifest.lock */,
+				648B8B6D64F4D48F159B6D80 /* [CP] Check Pods Manifest.lock */,
 				6B51BEA8252CBAF600B63655 /* Sources */,
 				6B51BEA9252CBAF600B63655 /* Frameworks */,
 				6B51BEAA252CBAF600B63655 /* Resources */,
-				49CF2EAF07E32E1DEED42E4D /* [CP] Embed Pods Frameworks */,
+				8A576B759E657876A82CD842 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,24 +187,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		49CF2EAF07E32E1DEED42E4D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		76D7C65C98B280B97D575C5C /* [CP] Check Pods Manifest.lock */ = {
+		648B8B6D64F4D48F159B6D80 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,6 +209,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8A576B759E657876A82CD842 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08B151662532BDD300F9353B /* FirebaseAuthService.swift in Sources */,
 				6B51BECF252CC33600B63655 /* HomeTabBarViewController.swift in Sources */,
 				0858A088252D529400E58F70 /* String+Validations+Ext.swift in Sources */,
 				6B51BEB4252CBAF600B63655 /* ViewController.swift in Sources */,
@@ -378,7 +382,7 @@
 		};
 		6B51BEC1252CBAF700B63655 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B983A8FF3323F1E7BE82117F /* Pods-ArtSpaceApp-iOS.debug.xcconfig */;
+			baseConfigurationReference = F3A665288F9F512831539B7F /* Pods-ArtSpaceApp-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,7 +400,7 @@
 		};
 		6B51BEC2252CBAF700B63655 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CCBAA80230A3679D86EDDAE /* Pods-ArtSpaceApp-iOS.release.xcconfig */;
+			baseConfigurationReference = 88E90342FADF403556B0B550 /* Pods-ArtSpaceApp-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
