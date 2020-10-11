@@ -27,17 +27,7 @@ class FirebaseAuthService {
   }
   
   // MARK: Internal Functions
-  func createNewUser(withEmail email: String, andPassword password: String, onCompletion: @escaping (Result<User, Error>) -> Void) {
-    firebaseAuth.createUser(withEmail: email, password: password) { (result, error) in
-      if let createdUser = result?.user {
-        onCompletion(.success(createdUser))
-      } else {
-        onCompletion(.failure(error ?? GenericError.unknown))
-      }
-    }
-  }
-  
-  func loginUser(withEmail email: String, andPassword password: String, onCompletion: @escaping (Result<User, Error>) -> Void) {
+func loginUser(withEmail email: String, andPassword password: String, onCompletion: @escaping (Result<User, Error>) -> Void) {
     firebaseAuth.signIn(withEmail: email, password: password) { (result, error) in
       if let user = result?.user {
         onCompletion(.success(user))
