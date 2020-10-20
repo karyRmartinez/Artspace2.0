@@ -9,31 +9,31 @@
 import UIKit
 import FirebaseAuth
 
+// MARK: Enums
+fileprivate enum TitleText {
+    static let appName = "Artspace"
+    static let loginButton = "Login"
+}
+
+fileprivate enum FontStyle {
+    static let savoyeLetPlain = "SavoyeLetPlain"
+    static let arialBold = "Arial-Bold"
+}
+
+fileprivate enum PlaceholderText {
+    static let emailAddress = "Email Address"
+    static let password = "Password"
+}
+
+fileprivate enum Color {
+    static let textColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+    static let backgroundColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+}
+
 class LoginAuthViewController: UIViewController {
-    
-    // MARK: Enums
-    enum TitleText {
-        static let appName = "Artspace"
-        static let loginButton = "Login"
-    }
-    
-    enum FontStyle {
-        static let savoyeLetPlain = "SavoyeLetPlain"
-        static let arialBold = "Arial-Bold"
-    }
-    
-    enum PlaceholderText {
-        static let emailAddress = "Email Address"
-        static let password = "Password"
-    }
-    
-    enum Color {
-        static let textColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
-        static let backgroundColor = UIColor(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
-    }
-    
+        
     //MARK: UI Properties
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Color.textColor
         label.text = "Login Screen"
@@ -41,7 +41,7 @@ class LoginAuthViewController: UIViewController {
         return label
     }()
     
-    lazy var emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = PlaceholderText.emailAddress
         textField.borderStyle = .roundedRect
@@ -50,7 +50,7 @@ class LoginAuthViewController: UIViewController {
         return textField
     }()
     
-    lazy var passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = PlaceholderText.password
         textField.borderStyle = .roundedRect
@@ -60,7 +60,7 @@ class LoginAuthViewController: UIViewController {
         return textField
     }()
 
-    lazy var loginAuthButton: UIButton = {
+    private lazy var loginAuthButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(TitleText.loginButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -154,7 +154,7 @@ class LoginAuthViewController: UIViewController {
     }
     
     // MARK: objc Methods
-    @objc func loginAuthButtonPressed() {
+    @objc private func loginAuthButtonPressed() {
         loginUser(loginAuthButton)
         print("Login Button Pressed")
     }
@@ -195,7 +195,7 @@ class LoginAuthViewController: UIViewController {
 
 // MARK: Extension
 extension LoginAuthViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
