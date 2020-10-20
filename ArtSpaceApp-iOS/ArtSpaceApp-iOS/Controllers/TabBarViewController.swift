@@ -10,7 +10,7 @@ import UIKit
 
 class HomeTabBarViewController: UITabBarController {
     
-    lazy var firstViewController = UINavigationController(rootViewController: FeedViewController())
+    lazy var firstViewController = UINavigationController(rootViewController: MainFeedViewController())
     lazy var SecondViewController = UINavigationController(rootViewController: UploadImageViewController())
     lazy var thirdViewController = UINavigationController(rootViewController: FavoritesViewController())
     lazy var fourthViewController = UINavigationController(rootViewController: ProfileViewController())
