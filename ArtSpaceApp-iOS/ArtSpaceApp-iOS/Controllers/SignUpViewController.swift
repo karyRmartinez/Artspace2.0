@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class SignupAuthViewController: UIViewController {
-    enum Text {
+  internal enum Text {
         static let createAccount  = "ArtSpace: Create Account"
         static let arialFont = "Arial"
         static let verdanaFont = "Verdana"
@@ -19,12 +19,13 @@ class SignupAuthViewController: UIViewController {
         static let createButton = "Create Account"
     }
     
-    enum UserDetails {
+   internal enum UserDetails {
         static let username =  "User Name"
         static let email = "Enter Email"
         static let password =  "Enter Password"
     }
-    lazy var titleLabel: UILabel = {
+    
+   private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = Text.createAccount
@@ -35,7 +36,7 @@ class SignupAuthViewController: UIViewController {
         return label
     }()
     
-    lazy var UserNameTextField: UITextField = {
+  private lazy var UserNameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = UserDetails.username
         textField.font = UIFont(name: Text.verdanaFont, size: 14)
@@ -46,7 +47,7 @@ class SignupAuthViewController: UIViewController {
     }()
     
     
-    lazy var emailTextField: UITextField = {
+    private lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = UserDetails.email
         textField.font = UIFont(name: Text.verdanaFont, size: 14)
@@ -56,7 +57,7 @@ class SignupAuthViewController: UIViewController {
         return textField
     }()
     
-    lazy var passwordTextField: UITextField = {
+   private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = UserDetails.password
         textField.font = UIFont(name: Text.verdanaFont, size: 14)
@@ -67,19 +68,19 @@ class SignupAuthViewController: UIViewController {
         return textField
     }()
     
-    lazy var createButton: UIButton = {
+   private lazy var createButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(Text.createButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: Text.verdanaBoldFont, size: 14)
         button.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         button.layer.cornerRadius = 5
-        button.addTarget(self, action: #selector(trySignUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signUpButtonPressed), for: .touchUpInside)
         button.isEnabled = true
         return button
     }()
     
-    lazy var stackView: UIStackView = {
+   private lazy var stackView: UIStackView = {
         let stackView = UIStackView(
             arrangedSubviews: [
                 UserNameTextField,
@@ -95,11 +96,12 @@ class SignupAuthViewController: UIViewController {
     }()
     
     //MARK: Obj-C Methods
-    @objc func trySignUp() {
+   @objc private func signUpButtonPressed() {
        if !validateFields() {
                 return
      
      }
+   signUpUser(createButton)
 }
     
     //MARK: Lifecycle methods
@@ -143,6 +145,44 @@ class SignupAuthViewController: UIViewController {
     
  
     
+    private func transitionToMainFeedVC() {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+          let sceneDelegate = windowScene.delegate as? SceneDelegate,
+          let window = sceneDelegate.window else {
+            return
+        }
+        UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
+          if FirebaseAuthService.manager.currentUser != nil {
+            window.rootViewController = HomeTabBarViewController()
+          } else {
+            window.rootViewController = { () -> HomeTabBarViewController in
+              let searchVC = HomeTabBarViewController()
+              return searchVC
+            }()
+          }
+        }, completion: nil)
+    }
+ //MARK: Firebase Methods
+    private func handleSignUpResponse(withResult result: Result<User, Error>) {
+        let alertTitle: String
+        let alertMessage: String
+        switch result {
+        case let .success(user):
+          transitionToMainFeedVC()
+          print("Create user with email \(user.email ?? "no email") and \(user.uid)")
+        case let .failure(error):
+          alertTitle = "Sign Up Failure"
+          alertMessage = "An error occured while Signing Up in: \(error.localizedDescription)"
+          showErrorAlert(title: alertTitle, message: alertMessage)
+        }
+    }
+    private func signUpUser(_ sender: UIButton) {
+// To Do : add parameter for userName
+        FirebaseAuthService.manager.createNewUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "") { [weak self] (result) in
+            self?.handleSignUpResponse(withResult: result)
+        }
+    }
+  
  //MARK: UI Contraints configuration
     private func setSubviews() {
         self.view.addSubview(titleLabel)
@@ -166,5 +206,13 @@ class SignupAuthViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             stackView.heightAnchor.constraint(equalToConstant: 250)
         ])
+    }
+}
+
+//MARK: Extension
+extension SignupAuthViewController: UITextFieldDelegate {
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

@@ -21,7 +21,6 @@
 		6B51BEE6252D04CA00B63655 /* FirenbaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEE5252D04CA00B63655 /* FirenbaseAuthService.swift */; };
 		6B51BEE9252D0C4E00B63655 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEE8252D0C4E00B63655 /* StringExtension.swift */; };
 		6B51BEEB252E0C1D00B63655 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B51BEEA252E0C1D00B63655 /* SignUpViewController.swift */; };
-		6B51BEEF252E649600B63655 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B51BEEE252E649600B63655 /* GoogleService-Info.plist */; };
 		9A7560237B0BB6DB5863550E /* Pods_ArtSpaceApp_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88610FD406E59538C0469E8 /* Pods_ArtSpaceApp_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +42,6 @@
 		6B51BEE5252D04CA00B63655 /* FirenbaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirenbaseAuthService.swift; sourceTree = "<group>"; };
 		6B51BEE8252D0C4E00B63655 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6B51BEEA252E0C1D00B63655 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		6B51BEEE252E649600B63655 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C553776CCAD02FF29085CD4E /* Pods-ArtSpaceApp-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtSpaceApp-iOS.release.xcconfig"; path = "Target Support Files/Pods-ArtSpaceApp-iOS/Pods-ArtSpaceApp-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		E88610FD406E59538C0469E8 /* Pods_ArtSpaceApp_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtSpaceApp_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,7 +96,6 @@
 				6B51BEB8252CBAF700B63655 /* Assets.xcassets */,
 				6B51BEBA252CBAF700B63655 /* LaunchScreen.storyboard */,
 				6B51BEBD252CBAF700B63655 /* Info.plist */,
-				6B51BEEE252E649600B63655 /* GoogleService-Info.plist */,
 				6B51BEE7252D0C2100B63655 /* Extensions */,
 				6B51BEE4252D045C00B63655 /* Firebase */,
 			);
@@ -203,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B51BEBC252CBAF700B63655 /* LaunchScreen.storyboard in Resources */,
-				6B51BEEF252E649600B63655 /* GoogleService-Info.plist in Resources */,
 				6B51BEB9252CBAF700B63655 /* Assets.xcassets in Resources */,
 				6B51BEB7252CBAF600B63655 /* Main.storyboard in Resources */,
 			);
