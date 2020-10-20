@@ -146,9 +146,8 @@ class LoginAuthViewController: UIViewController {
             return
         }
         
-        
-        FirebaseAuthService.manager.loginUser(withEmail: validCredentials.email,
-                                              andPassword: validCredentials.password) { [weak self] (result) in self?.handleLoginResponse(withResult: result)
+        FirebaseAuthService.manager.loginUser(withEmail: validCredentials.email, andPassword: validCredentials.password) { [weak self] (result) in
+            self?.handleLoginResponse(withResult: result)
         }
     }
     
