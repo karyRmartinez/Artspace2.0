@@ -14,14 +14,14 @@ fileprivate let imageURLKey = "profileImageURL"
 
 struct AppUser {
     let username: String?
-    let email: String?
+    let userEmail: String?
     let uid: String
     let dateCreated: Date?
     let profileImageURL: String?
     
     init(from user: User) {
         self.username = user.displayName
-        self.email = user.email
+        self.userEmail = user.email
         self.uid = user.uid
         self.profileImageURL = user.photoURL?.absoluteString
         self.dateCreated = user.metadata.creationDate
@@ -29,18 +29,18 @@ struct AppUser {
     
     //    MARK: - Failable init
     init?(from dict: [String: Any], id: String) {
-        guard let userName = dict["userName"] as? String,
-              let email = dict["email"] as? String,
+        guard let userName = dict["username"] as? String,
+              let email = dict["userEmail"] as? String,
               let profileImageURL = dict["profileImageURL"] as? String,
               let dateCreated = (dict["dateCreated"] as? Timestamp)?.dateValue() else {return nil}
         self.username = userName
-        self.email = email
+        self.userEmail = email
         self.dateCreated = dateCreated
         self.uid = id
         self.profileImageURL = profileImageURL
     }
     
     var fieldsDict: [String:Any] {
-        return ["userName": self.username ?? "", "email": self.email ?? "", "uid": self.uid, "profileImageURL": self.profileImageURL ?? ""]
+        return ["username": self.username ?? "", "userEmail": self.userEmail ?? "", "uid": self.uid, "profileImageURL": self.profileImageURL ?? ""]
     }
 }

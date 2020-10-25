@@ -111,10 +111,10 @@ class LoginAuthViewController: UIViewController {
         }
         UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
           if FirebaseAuthService.manager.currentUser != nil {
-            window.rootViewController = HomeTabBarViewController()
+            window.rootViewController = TabBarViewController()
           } else {
-            window.rootViewController = { () -> HomeTabBarViewController in
-              let searchVC = HomeTabBarViewController()
+            window.rootViewController = { () -> TabBarViewController in
+              let searchVC = TabBarViewController()
               return searchVC
             }()
           }

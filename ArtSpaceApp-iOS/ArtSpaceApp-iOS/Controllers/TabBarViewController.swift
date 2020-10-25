@@ -8,30 +8,20 @@
 
 import UIKit
 
-class HomeTabBarViewController: UITabBarController {
+class TabBarViewController: UITabBarController {
     
-    lazy var firstViewController = UINavigationController(rootViewController: MainFeedViewController())
-    lazy var SecondViewController = UINavigationController(rootViewController: UploadImageViewController())
-    lazy var thirdViewController = UINavigationController(rootViewController: FavoritesViewController())
-    lazy var fourthViewController = UINavigationController(rootViewController: ProfileViewController())
+    lazy var mainFeedVC = UINavigationController(rootViewController: MainFeedViewController())
+    lazy var uploadImageVC = UINavigationController(rootViewController: UploadImageViewController())
+    lazy var FavImagesVC = UINavigationController(rootViewController: FavoritesViewController())
+    lazy var profileVC = UINavigationController(rootViewController: ProfileViewController())
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house.fill"), tag: 0)
-        SecondViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "plus"), tag: 0)
-        thirdViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "bookmark.fill"), tag: 0)
-        fourthViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.circle.fill"), tag: 0)
-        self.viewControllers = [firstViewController,SecondViewController,thirdViewController,fourthViewController]
+        mainFeedVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house.fill"), tag: 0)
+        uploadImageVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "plus"), tag: 1)
+        FavImagesVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "bookmark.fill"), tag: 2)
+        profileVC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.circle.fill"), tag: 3)
+        self.viewControllers = [mainFeedVC,uploadImageVC,FavImagesVC,profileVC]
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
