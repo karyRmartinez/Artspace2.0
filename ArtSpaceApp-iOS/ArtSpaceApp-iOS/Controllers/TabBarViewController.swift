@@ -10,10 +10,10 @@ import UIKit
 
 class HomeTabBarViewController: UITabBarController {
     
-    lazy var firstViewController = UINavigationController(rootViewController: MainFeedViewController())
-    lazy var SecondViewController = UINavigationController(rootViewController: UploadImageViewController())
-    lazy var thirdViewController = UINavigationController(rootViewController: FavoritesViewController())
-    lazy var fourthViewController = UINavigationController(rootViewController: ProfileViewController())
+    private lazy var firstViewController = UINavigationController(rootViewController: MainFeedViewController())
+    private lazy var SecondViewController = UINavigationController(rootViewController: UploadImageViewController())
+    private lazy var thirdViewController = UINavigationController(rootViewController: FavoritesViewController())
+    private lazy var fourthViewController = UINavigationController(rootViewController: ProfileViewController())
     
     
     override func viewDidLoad() {
@@ -24,14 +24,4 @@ class HomeTabBarViewController: UITabBarController {
         fourthViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.circle.fill"), tag: 0)
         self.viewControllers = [firstViewController,SecondViewController,thirdViewController,fourthViewController]
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
