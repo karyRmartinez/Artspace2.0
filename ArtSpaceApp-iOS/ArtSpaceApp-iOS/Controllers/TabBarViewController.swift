@@ -9,12 +9,11 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-    
-    lazy var mainFeedVC = UINavigationController(rootViewController: MainFeedViewController())
-    lazy var uploadImageVC = UINavigationController(rootViewController: UploadImageViewController())
-    lazy var FavImagesVC = UINavigationController(rootViewController: FavoritesViewController())
-    lazy var profileVC = UINavigationController(rootViewController: ProfileViewController())
-    
+
+    private lazy var mainFeedVC = UINavigationController(rootViewController: MainFeedViewController())
+    private lazy var uploadImageVC = UINavigationController(rootViewController: UploadImageViewController())
+    private lazy var FavImagesVC = UINavigationController(rootViewController: FavoritesViewController())
+    private lazy var profileVC = UINavigationController(rootViewController: ProfileViewController())
     
     override func viewDidLoad() {
         super.viewDidLoad()

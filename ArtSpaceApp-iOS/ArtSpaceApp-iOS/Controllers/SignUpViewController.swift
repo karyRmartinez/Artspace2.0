@@ -11,7 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class SignupAuthViewController: UIViewController {
-  internal enum Text {
+    enum Text {
         static let createAccount  = "ArtSpace: Create Account"
         static let arialFont = "Arial"
         static let verdanaFont = "Verdana"
@@ -19,13 +19,13 @@ class SignupAuthViewController: UIViewController {
         static let createButton = "Create Account"
     }
     
-   internal enum UserDetails {
+    internal enum UserDetails {
         static let username =  "User Name"
         static let email = "Enter Email"
         static let password =  "Enter Password"
     }
     
-   private lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.text = Text.createAccount
@@ -36,7 +36,7 @@ class SignupAuthViewController: UIViewController {
         return label
     }()
     
-  private lazy var UserNameTextField: UITextField = {
+    private lazy var UserNameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = UserDetails.username
         textField.font = UIFont(name: Text.verdanaFont, size: 14)
@@ -57,7 +57,7 @@ class SignupAuthViewController: UIViewController {
         return textField
     }()
     
-   private lazy var passwordTextField: UITextField = {
+    private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = UserDetails.password
         textField.font = UIFont(name: Text.verdanaFont, size: 14)
@@ -68,7 +68,7 @@ class SignupAuthViewController: UIViewController {
         return textField
     }()
     
-   private lazy var createButton: UIButton = {
+    private lazy var createButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(Text.createButton, for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -80,7 +80,7 @@ class SignupAuthViewController: UIViewController {
         return button
     }()
     
-   private lazy var stackView: UIStackView = {
+    private lazy var stackView: UIStackView = {
         let stackView = UIStackView(
             arrangedSubviews: [
                 UserNameTextField,
@@ -96,13 +96,13 @@ class SignupAuthViewController: UIViewController {
     }()
     
     //MARK: Obj-C Methods
-   @objc private func signUpButtonPressed() {
-       if !validateFields() {
-                return
-     
-     }
-   signUpUser(createButton)
-}
+    @objc private func signUpButtonPressed() {
+        if !validateFields() {
+            return
+            
+        }
+        signUpUser(createButton)
+    }
     
     //MARK: Lifecycle methods
     override func viewDidLoad() {
@@ -115,9 +115,9 @@ class SignupAuthViewController: UIViewController {
     
     //MARK: Private methods
     private func showErrorAlert(title: String, message: String) {
-    let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-    present(alertVC, animated: true, completion: nil)
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
     }
     
     private func configureViewController() {
@@ -125,30 +125,30 @@ class SignupAuthViewController: UIViewController {
     }
     
     private func validateFields() -> Bool {
-          guard let _ =  UserNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
-     showErrorAlert(title: "Error", message: "Please fill out all fields.")
-              return false
-          }
-          
-          guard email.isValidEmail else {
-    showErrorAlert(title: "Error", message: "Please enter a valid email")
-              return false
-          }
-          
-          guard password.isValidPassword else {
-    showErrorAlert(title: "Error", message: "Please enter a valid password. Passwords must have at least 8 characters.")
-              return false
-          }
-          
-          return true
-      }
+        guard let _ =  UserNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), let password = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            showErrorAlert(title: "Error", message: "Please fill out all fields.")
+            return false
+        }
+        
+        guard email.isValidEmail else {
+            showErrorAlert(title: "Error", message: "Please enter a valid email")
+            return false
+        }
+        
+        guard password.isValidPassword else {
+            showErrorAlert(title: "Error", message: "Please enter a valid password. Passwords must have at least 8 characters.")
+            return false
+        }
+        
+        return true
+    }
     
- 
+    
     
     private func transitionToMainFeedVC() {
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-          let sceneDelegate = windowScene.delegate as? SceneDelegate,
-          let window = sceneDelegate.window else {
+              let sceneDelegate = windowScene.delegate as? SceneDelegate,
+              let window = sceneDelegate.window else {
             return
         }
         UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
@@ -162,40 +162,40 @@ class SignupAuthViewController: UIViewController {
           }
         }, completion: nil)
     }
- //MARK: Firebase Methods
+    //MARK: Firebase Methods
     private func handleSignUpResponse(withResult result: Result<User, Error>) {
         let alertTitle: String
         let alertMessage: String
         switch result {
         case let .success(user):
-          transitionToMainFeedVC()
-          print("Create user with email \(user.email ?? "no email") and \(user.uid)")
+            transitionToMainFeedVC()
+            print("Create user with email \(user.email ?? "no email") and \(user.uid)")
         case let .failure(error):
-          alertTitle = "Sign Up Failure"
-          alertMessage = "An error occured while Signing Up in: \(error.localizedDescription)"
-          showErrorAlert(title: alertTitle, message: alertMessage)
+            alertTitle = "Sign Up Failure"
+            alertMessage = "An error occured while Signing Up in: \(error.localizedDescription)"
+            showErrorAlert(title: alertTitle, message: alertMessage)
         }
     }
     private func signUpUser(_ sender: UIButton) {
-// To Do : add parameter for userName
+        // To Do : add parameter for userName
         FirebaseAuthService.manager.createNewUser(email: emailTextField.text ?? "", password: passwordTextField.text ?? "") { [weak self] (result) in
             self?.handleSignUpResponse(withResult: result)
         }
     }
-  
- //MARK: UI Contraints configuration
+    
+    //MARK: UI Contraints configuration
     private func setSubviews() {
         self.view.addSubview(titleLabel)
         self.view.addSubview(stackView)
     }
-
+    
     private func setTitleLabelConstraints() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 30),
-            titleLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            titleLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            titleLabel.heightAnchor.constraint(lessThanOrEqualTo: self.view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.8)])
+                                        titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 30),
+                                        titleLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+                                        titleLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+                                        titleLabel.heightAnchor.constraint(lessThanOrEqualTo: self.view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.8)])
     }
     
     private func setupStackViewConstraints() {
@@ -211,7 +211,7 @@ class SignupAuthViewController: UIViewController {
 
 //MARK: Extension
 extension SignupAuthViewController: UITextFieldDelegate {
-    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

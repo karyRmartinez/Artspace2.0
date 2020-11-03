@@ -30,7 +30,7 @@ fileprivate enum Color {
 }
 
 class LoginAuthViewController: UIViewController {
-        
+    
     //MARK: UI Properties
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -58,7 +58,7 @@ class LoginAuthViewController: UIViewController {
         textField.autocapitalizationType = .none
         return textField
     }()
-
+    
     private lazy var loginAuthButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle(TitleText.loginButton, for: .normal)
@@ -105,8 +105,8 @@ class LoginAuthViewController: UIViewController {
     
     private func transitionToMainFeedVC( ){
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-          let sceneDelegate = windowScene.delegate as? SceneDelegate,
-          let window = sceneDelegate.window else {
+              let sceneDelegate = windowScene.delegate as? SceneDelegate,
+              let window = sceneDelegate.window else {
             return
         }
         UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
@@ -127,18 +127,18 @@ class LoginAuthViewController: UIViewController {
         let alertMessage: String
         switch result {
         case let .success(user):
-          transitionToMainFeedVC()
-          print("Logged in user with email \(user.email ?? "no email") and \(user.uid)")
+            transitionToMainFeedVC()
+            print("Logged in user with email \(user.email ?? "no email") and \(user.uid)")
         case let .failure(error):
-          alertTitle = "Login Failure"
-          alertMessage = "An error occured while logging in: \(error.localizedDescription)"
-          presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
+            alertTitle = "Login Failure"
+            alertMessage = "An error occured while logging in: \(error.localizedDescription)"
+            presentGenericAlert(withTitle: alertTitle, andMessage: alertMessage)
         }
     }
     
     private func loginUser(_ sender: UIButton) {
         guard let validCredentials = validateUserCredentials else { return }
-
+        
         guard validCredentials.email.isValidEmail else {
             let alertTitle = "Error"
             let alertMessage = "Please enter a valid email"
@@ -156,7 +156,7 @@ class LoginAuthViewController: UIViewController {
         loginUser(loginAuthButton)
         print("Login Button Pressed")
     }
-
+    
     // MARK: UIElement Configuration
     private func configureUIElements() {
         emailTextField.delegate = self
@@ -193,7 +193,7 @@ class LoginAuthViewController: UIViewController {
 
 // MARK: Extension
 extension LoginAuthViewController: UITextFieldDelegate {
-    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
