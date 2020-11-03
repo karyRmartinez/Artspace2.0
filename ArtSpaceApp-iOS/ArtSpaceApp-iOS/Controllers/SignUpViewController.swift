@@ -152,14 +152,14 @@ class SignupAuthViewController: UIViewController {
             return
         }
         UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromTop, animations: {
-            if FirebaseAuthService.manager.currentUser != nil {
-                window.rootViewController = HomeTabBarViewController()
-            } else {
-                window.rootViewController = { () -> HomeTabBarViewController in
-                    let searchVC = HomeTabBarViewController()
-                    return searchVC
-                }()
-            }
+          if FirebaseAuthService.manager.currentUser != nil {
+            window.rootViewController = TabBarViewController()
+          } else {
+            window.rootViewController = { () -> TabBarViewController in
+              let searchVC = TabBarViewController()
+              return searchVC
+            }()
+          }
         }, completion: nil)
     }
     //MARK: Firebase Methods
